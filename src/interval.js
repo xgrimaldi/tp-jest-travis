@@ -10,13 +10,13 @@ class Interval {
 
     /**
      * Exemple 1 :
-     *      interval1 =                          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-     *      interval2 =                                  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval1 =   Start 5 ; Fin 20 ;
+     *      interval2 =   Start 15; Fin 25 ; 
      *      interval1.overlaps(interval2) => true
      *
      * Exemple 2 :
-     *      interval1 =                          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-     *      interval2 =                                                       ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval1 =  Start 5 ; Fin 10 ; 
+     *      interval2 =  Start 15 ; Fin 25 ; 
      *      interval1.overlaps(interval2) => false
      *
      * @param {Interval} interval
@@ -43,7 +43,7 @@ class Interval {
      * @returns {boolean}
      */
     includes(interval) {
-
+        
     };
 
     /**
