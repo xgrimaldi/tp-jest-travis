@@ -104,9 +104,12 @@ Util.fizzBuzz = function (n) {
  * @returns {string}
  */
 Util.cipher = function (phrase) {
-
+  var end="";
+  for (var i = 0; i < phrase.length; i++) {
+    end += String.fromCharCode(phrase.charAt(i).charCodeAt(0) + 1);;
+  }
+  return end;
 };
-
 
 module.exports = Util;
 
