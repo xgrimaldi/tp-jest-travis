@@ -125,3 +125,16 @@ describe('fizzBuzz', function () {
     }
   );
 });
+
+describe('cipher', function () {
+  test('Test cipher de hello => false', () => {
+    expect(Util.cipher("hello")).toEqual("ifmmp");
+  });
+  test('Test cipher de hello => false', () => {
+    expect(Util.cipher("ZZTOP")).toEqual("[[UPQ");
+  });
+  test('Test cipher de hello => false', () => {
+    expect(Util.cipher("ZZTOP")).not.toEqual("[[UPdfgdfdfQ");
+  });
+
+});
