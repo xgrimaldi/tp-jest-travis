@@ -156,7 +156,7 @@ describe('\n#########################################\n'+
 
 
 /**
- * Test de la fonction includes() du fichier 'interval.js'
+ * Test de la fonction union() du fichier 'interval.js'
  */
 describe('\n#########################################\n'+
          'Test de la fonction "union()"\n'+
@@ -199,3 +199,47 @@ describe('\n#########################################\n'+
       );
 });
 
+
+/**
+ * Test de la fonction union() du fichier 'interval.js'
+ */
+describe('\n#########################################\n'+
+         'Test de la fonction "intersection()"\n'+
+         '#########################################', function () {
+
+    // #####################################
+    // Intersection-Overlaping interval
+    // #####################################
+    // Vérification avec différents type d'intervalles positifs, négatifs, continus (se suivant l'un l'autre), données non numérique
+    let inter1 = new Interval(5,17);
+    let inter2 = new Interval(15,25);
+    let inter3 = new Interval(30,35);
+    let interOver1n = new Interval(-10,-1);
+    let interOver2n = new Interval(-10,-4);
+
+    test.each([
+        [inter1, inter2,new Interval(15,17),""],
+        [inter2, inter1,new Interval(15,17),""],
+        [interOver1n, interOver2n,new Interval(-10,-4),""],
+        [interOver2n, interOver1n,new Interval(-10,-4),""],
+      ])(
+        'Test Intersection-Non-Overlaping : (%s union %s) = expected(%s). %s',
+        (int1,int2,expected ) => {
+            expect(int1.intersection(int2)).toEqual(expected);
+        }
+      );
+
+    // #####################################
+    // Intersection-Non-Overlaping interval
+    // #####################################
+      test.each([
+        [inter1, inter3,null,""],
+        [inter3, inter2,null,""],
+        [inter3, inter2,null,""],
+      ])(
+        'Test Intersection-Non-Overlaping : (%s union %s) = expected(%s). %s',
+        (int1,int2,expected ) => {
+            expect(int1.intersection(int2)).toEqual(expected);
+        }
+      );
+});
