@@ -243,3 +243,47 @@ describe('\n#########################################\n'+
         }
       );
 });
+
+/**
+ * Test de la fonction exclusion() du fichier 'interval.js'
+ */
+describe('\n#########################################\n'+
+         'Test de la fonction "exclusion()"\n'+
+         '#########################################', function () {
+
+    // #####################################
+    // Exclusion-Overlaping interval
+    // #####################################
+    // Vérification avec différents type d'intervalles positifs, négatifs, continus (se suivant l'un l'autre), données non numérique
+    let inter1 = new Interval(5,17);
+    let inter2 = new Interval(15,25);
+    let inter3 = new Interval(30,35);
+    let interOver1n = new Interval(-10,-1);
+    let interOver2n = new Interval(-10,-4);
+
+    test.each([
+        [inter1, inter2,new Interval(5,15),""],
+        [inter2, inter1,new Interval(5,15),""],
+        [interOver1n, interOver2n,new Interval(-4,-1),""],
+        [interOver2n, interOver1n,new Interval(-4,-1),""],
+      ])(
+        'Test Intersection-Non-Overlaping : (%s union %s) = expected(%s). %s',
+        (int1,int2,expected ) => {
+            expect(int1.exclusion(int2)).toContainEqual(expected);
+        }
+      );
+
+    // #####################################
+    // Exclusion-Non-Overlaping interval
+    // #####################################
+      test.each([
+        [inter1, inter3,inter1,""],
+        [inter3, inter2,inter3,""],
+        [inter3, inter2,inter2,""],
+      ])(
+        'Test Intersection-Non-Overlaping : (%s union %s) = expected(%s). %s',
+        (int1,int2,expected ) => {
+            expect(int1.exclusion(int2)).toContainEqual(expected);
+        }
+      );
+});
