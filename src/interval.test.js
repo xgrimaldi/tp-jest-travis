@@ -201,7 +201,7 @@ describe('\n#########################################\n'+
 
 
 /**
- * Test de la fonction union() du fichier 'interval.js'
+ * Test de la fonction interval() du fichier 'interval.js'
  */
 describe('\n#########################################\n'+
          'Test de la fonction "intersection()"\n'+
