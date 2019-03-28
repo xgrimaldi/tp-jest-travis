@@ -110,7 +110,14 @@ class Interval {
      * @returns {Interval[]}
      */
     exclusion(interval) {
-
+        let intersec = this.intersection(interval);
+        if(intersec){
+            let union = this.union(interval)[0];
+            return [new Interval(Math.min(union.start,intersec.start),Math.max(union.start,intersec.start)),
+                    new Interval(Math.min(union.end,intersec.end),Math.max(union.end,intersec.end))];
+        } else{
+            return [this,interval];
+        }
     };
 }
 
