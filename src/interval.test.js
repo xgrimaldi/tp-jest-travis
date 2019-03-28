@@ -201,7 +201,7 @@ describe('\n#########################################\n'+
 
 
 /**
- * Test de la fonction union() du fichier 'interval.js'
+ * Test de la fonction interval() du fichier 'interval.js'
  */
 describe('\n#########################################\n'+
          'Test de la fonction "intersection()"\n'+
@@ -223,7 +223,7 @@ describe('\n#########################################\n'+
         [interOver1n, interOver2n,new Interval(-10,-4),""],
         [interOver2n, interOver1n,new Interval(-10,-4),""],
       ])(
-        'Test Intersection-Non-Overlaping : (%s union %s) = expected(%s). %s',
+        'Test Intersection-Non-Overlaping : (%s interval %s) = expected(%s). %s',
         (int1,int2,expected ) => {
             expect(int1.intersection(int2)).toEqual(expected);
         }
@@ -237,7 +237,7 @@ describe('\n#########################################\n'+
         [inter3, inter2,null,""],
         [inter3, inter2,null,""],
       ])(
-        'Test Intersection-Non-Overlaping : (%s union %s) = expected(%s). %s',
+        'Test Intersection-Non-Overlaping : (%s interval %s) = expected(%s). %s',
         (int1,int2,expected ) => {
             expect(int1.intersection(int2)).toEqual(expected);
         }
