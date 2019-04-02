@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const Util = require('./math');
 
 describe('Factorial', function () {

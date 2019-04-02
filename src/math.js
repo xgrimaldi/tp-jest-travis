@@ -58,7 +58,7 @@ Util.sumPrime = function (n) {
   if (n > 100000) {
     throw 'Unable to compute sumPrime for n > 100 000'
   }
-  sum = 0;
+  let sum = 0;
   for (var i = 2; i <= n; i++) {
     if (Util.isPrime(i))
       sum = sum + i;
@@ -79,7 +79,7 @@ Util.sumPrime = function (n) {
  * @returns {array}
  */
 Util.fizzBuzz = function (n) {
-  res = [];
+  let res = [];
   for (var i = 1; i <= n; i++) {
     if (i % 15 === 0)
       res.push("FizzBuzz");
@@ -106,7 +106,7 @@ Util.fizzBuzz = function (n) {
 Util.cipher = function (phrase) {
   var end="";
   for (var i = 0; i < phrase.length; i++) {
-    end += String.fromCharCode(phrase.charAt(i).charCodeAt(0) + 1);;
+    end += String.fromCharCode(phrase.charAt(i).charCodeAt(0) + 1);
   }
   return end;
 };
