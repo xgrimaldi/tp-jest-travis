@@ -7,3 +7,7 @@ repository.save({
     id: 10,
     name: "test"
 })
+
+console.log(repository.getTotalCount());
+
+console.log(repository.getTotalPrice());
