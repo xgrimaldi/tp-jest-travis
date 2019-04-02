@@ -18,7 +18,6 @@ class BookRepository {
      * Nombre total de livre
      */
     getTotalCount() {
-        
     }
 
     /**
