@@ -38,5 +38,7 @@
     "eslint": "^5.16.0",
     "jest": "^24.5.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lowdb": "^1.0.0"
+  }
 }
