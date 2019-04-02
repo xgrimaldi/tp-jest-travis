@@ -5,9 +5,9 @@ class Interval {
     }
 
     toString() {
-        return "[" + this.start + "," + this.end + "]";
+        return `[${this.start},${this.end}]`;
     }
-
+    
     /**
      * Exemple 1 :
      *      interval1 =   Start 5 ; Fin 20 ;
