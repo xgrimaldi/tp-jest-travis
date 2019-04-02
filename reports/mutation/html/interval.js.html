@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html><head><title>interval.js
+ - Stryker report</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="strykerResources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="strykerResources/highlightjs/styles/default.css">
+<link rel="stylesheet" href="strykerResources/stryker/stryker.css"></head>
+<body><img class="stryker-image" alt="Stryker" src="strykerResources/stryker/stryker-80x80.png">
+<div class="container-fluid"><div class="row"><div class="col-lg-12"><h1 class="display-4">interval.js
+ 
+<small class="text-muted">- Stryker report</small></h1></div></div>
+<ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">All files</a></li>
+<li class="breadcrumb-item active">interval.js</li></ol>
+<div class="row"><div class="col-lg-12"><div class="row"><div class="col-sm-11"><table class="table table-sm table-hover table-bordered table-no-top"><thead><tr><th style="width: 20%"><div><span>File / Directory</span></div></th>
+<th colspan="2"><div><span>Mutation score</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Killed</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Survived</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Timeout</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># No coverage</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Runtime errors</span></div></th>
+<th class="rotate text-center" style="width: 50px"><div><span># Transpile errors</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total detected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total undetected</span></div></th>
+<th class="rotate rotate-width-70 text-center" style="width: 70px"><div><span>Total mutants</span></div></th></tr></thead>
+<tbody><tr><td>interval.js</td>
+<td><div class="progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="97.67" aria-valuemin="0" aria-valuemax="100" style="width: 97.67%;">97.67
+%</div></div></td>
+<th class="text-center text-success" style="width: 10%">97.67</th>
+<td class="text-center">42</td>
+<td class="text-center">1</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<td class="text-center">0</td>
+<th class="text-center">42</th>
+<th class="text-center">1</th>
+<th class="text-center">43</th></tr>
+</tbody></table></div></div>
+<div class="row"><div class="col-lg-7"><div class="row legend"><form class="col-md-12" novalidate="novalidate">
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" checked value="2" type="checkbox">
+Survived
+ 
+(1)</label></div>
+<div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input stryker-display" value="1" type="checkbox">
+Killed
+ 
+(42)</label></div>
+
+
+
+<a href="#" class="stryker-collapse-expand-all">Expand all</a></form></div>
+<pre><code class="lang-javascript"><span class="bg-null">class Interval {
+    constructor(start, end) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="0"><span class="badge badge-success">0</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="0">{}</span><span class="stryker-original-code" data-mutant="0"><span class="bg-success-light">{
+        this.start = start;
+        this.end = end
+    }</span></span><span class="bg-null">
+
+    toString() </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="1"><span class="badge badge-success">1</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="1">{}</span><span class="stryker-original-code" data-mutant="1"><span class="bg-success-light">{
+        return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="StringLiteral" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="2"><span class="badge badge-success">2</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="2">&quot;&quot;</span><span class="stryker-original-code" data-mutant="2"><span class="bg-success-light">`[${this.start},${this.end}]`</span></span><span class="bg-success-light">;
+    }</span></span><span class="bg-null">
+    
+    /**
+     * Exemple 1 :
+     *      interval1 =   Start 5 ; Fin 20 ;
+     *      interval2 =   Start 15; Fin 25 ; 
+     *      interval1.overlaps(interval2) =&gt; true
+     *
+     * Exemple 2 :
+     *      interval1 =  Start 5 ; Fin 10 ; 
+     *      interval2 =  Start 15 ; Fin 25 ; 
+     *      interval1.overlaps(interval2) =&gt; false
+     *
+     * @param {Interval} interval
+     * @returns {boolean}
+     */
+    overlaps(interval) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="3"><span class="badge badge-success">3</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="3">{}</span><span class="stryker-original-code" data-mutant="3"><span class="bg-success-light">{
+        return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="4"><span class="badge badge-success">4</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="4">this.end &gt; interval.start || this.start &lt; interval.end</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="5"><span class="badge badge-success">5</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="5">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="6"><span class="badge badge-success">6</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="6">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="7"><span class="badge badge-success">7</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="7">this.end &gt;= interval.start</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="8"><span class="badge badge-success">8</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="8">this.end &lt;= interval.start</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="9"><span class="badge badge-success">9</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="9">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="10"><span class="badge badge-success">10</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="10">true</span><span class="stryker-original-code" data-mutant="4"><span class="stryker-original-code" data-mutant="5"><span class="stryker-original-code" data-mutant="6"><span class="stryker-original-code" data-mutant="7"><span class="stryker-original-code" data-mutant="8"><span class="stryker-original-code" data-mutant="9"><span class="stryker-original-code" data-mutant="10"><span class="bg-success-light">this.end &gt; interval.start</span></span></span></span></span><span class="bg-success-light"> &amp;&amp; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Survived" data-mutant-status-annotation="danger" data-mutant-status="2" data-mutant="11"><span class="badge badge-danger">11</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="11">this.start &lt;= interval.end</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="12"><span class="badge badge-success">12</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="12">this.start &gt;= interval.end</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="13"><span class="badge badge-success">13</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="13">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="14"><span class="badge badge-success">14</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="14">true</span><span class="stryker-original-code" data-mutant="11"><span class="stryker-original-code" data-mutant="12"><span class="stryker-original-code" data-mutant="13"><span class="stryker-original-code" data-mutant="14"><span class="bg-danger-light">this.start &lt; interval.end</span></span></span></span></span></span></span></span><span class="bg-success-light">;
+    }</span></span><span class="bg-null">
+
+    /**
+     * Retourne true si cet interval contient le paramètre interval
+     *
+     * Exemple 1 :
+     *      interval1 =                                 (0,5)
+     *      interval2 =                                 (2,4)
+     *      interval1.includes(interval2) =&gt; true
+     *
+     * Exemple 2 :
+     *      interval1 =                                 (10,20)
+     *      interval2 =                                 (15,25)
+     *      interval1.includes(interval2) =&gt; false
+     *
+     * @param {Interval} interval
+     * @returns {boolean}
+     */
+    includes(interval) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="15"><span class="badge badge-success">15</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="15">{}</span><span class="stryker-original-code" data-mutant="15"><span class="bg-success-light">{
+        return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="16"><span class="badge badge-success">16</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="16">this.start &lt;= interval.start || this.end &gt;= interval.end</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="17"><span class="badge badge-success">17</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="17">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="18"><span class="badge badge-success">18</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="18">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="19"><span class="badge badge-success">19</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="19">this.start &lt; interval.start</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="20"><span class="badge badge-success">20</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="20">this.start &gt; interval.start</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="21"><span class="badge badge-success">21</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="21">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="22"><span class="badge badge-success">22</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="22">true</span><span class="stryker-original-code" data-mutant="16"><span class="stryker-original-code" data-mutant="17"><span class="stryker-original-code" data-mutant="18"><span class="stryker-original-code" data-mutant="19"><span class="stryker-original-code" data-mutant="20"><span class="stryker-original-code" data-mutant="21"><span class="stryker-original-code" data-mutant="22"><span class="bg-success-light">this.start &lt;= interval.start</span></span></span></span></span><span class="bg-success-light"> &amp;&amp; </span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="23"><span class="badge badge-success">23</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="23">this.end &gt; interval.end</span><a href="#" class="stryker-mutant-button" tabindex="0" title="BinaryExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="24"><span class="badge badge-success">24</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="24">this.end &lt; interval.end</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="25"><span class="badge badge-success">25</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="25">true</span><a href="#" class="stryker-mutant-button" tabindex="0" title="ConditionalExpression" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="26"><span class="badge badge-success">26</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="26">false</span><span class="stryker-original-code" data-mutant="23"><span class="stryker-original-code" data-mutant="24"><span class="stryker-original-code" data-mutant="25"><span class="stryker-original-code" data-mutant="26"><span class="bg-success-light">this.end &gt;= interval.end</span></span></span></span></span></span></span></span><span class="bg-success-light">;
+    }</span></span><span class="bg-null">;
+
+    /**
+     * Retourne l&#039;union de deux intervals
+     *
+     * Exemple 1 :
+     *      interval1 =                          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval2 =                                              ▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval1.union(interval2) =&gt;        ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+     *
+     * Exemple 2 :
+     *      interval1 =                          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval2 =                                                      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval1.union(interval2) =&gt;        ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+     *
+     * @param {Interval} interval
+     * @returns {Interval[]}
+     */
+    union(interval) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="27"><span class="badge badge-success">27</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="27">{}</span><span class="stryker-original-code" data-mutant="27"><span class="bg-success-light">{
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="28"><span class="badge badge-success">28</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="28">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="29"><span class="badge badge-success">29</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="29">true</span><span class="stryker-original-code" data-mutant="28"><span class="stryker-original-code" data-mutant="29"><span class="bg-success-light">this.overlaps(interval)</span></span></span><span class="bg-success-light">)
+            return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="30"><span class="badge badge-success">30</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="30">[]</span><span class="stryker-original-code" data-mutant="30"><span class="bg-success-light">[new Interval(Math.min(this.start,interval.start),Math.max(this.end,interval.end))]</span></span><span class="bg-success-light">;
+        else</span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="31"><span class="badge badge-success">31</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="31">{}</span><span class="stryker-original-code" data-mutant="31"><span class="bg-success-light">{
+            return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="32"><span class="badge badge-success">32</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="32">[]</span><span class="stryker-original-code" data-mutant="32"><span class="bg-success-light">[this,interval]</span></span><span class="bg-success-light">;
+        }</span></span><span class="bg-success-light">
+    }</span></span><span class="bg-null">;
+
+    /**
+     * Retourne l&#039;intersection de deux intervals
+     *
+     * Exemple 1 :
+     *      interval1 =                          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval2 =                                              ▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval1.intersection(interval2) =&gt;                     ▒▒▒▒▒
+     *
+     * Exemple 2 :
+     *      interval1 =                          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval2 =                                                      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval1.intersection(interval2) =&gt; &lt;tableau vide&gt;
+     *
+     * @param {Interval} interval
+     * @returns {Interval|null}
+     */
+    intersection(interval) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="33"><span class="badge badge-success">33</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="33">{}</span><span class="stryker-original-code" data-mutant="33"><span class="bg-success-light">{
+        if (</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="34"><span class="badge badge-success">34</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="34">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="35"><span class="badge badge-success">35</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="35">true</span><span class="stryker-original-code" data-mutant="34"><span class="stryker-original-code" data-mutant="35"><span class="bg-success-light">this.overlaps(interval)</span></span></span><span class="bg-success-light">)
+            return new Interval(Math.max(this.start,interval.start),Math.min(this.end,interval.end));
+        else
+            return null;
+    }</span></span><span class="bg-null">;
+
+    /**
+     * Retourne l&#039;exclusion de deux intervals
+     *
+     * Exemple 1 :
+     *      interval1 =                          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval2 =                                              ▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval1.exclusion(interval2) =&gt;    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒     ▒▒▒▒▒▒▒▒
+     *
+     * Exemple 2 :
+     *      interval1 =                          ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval2 =                                                      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+     *      interval1.exclusion(interval2) =&gt;    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒   ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+     *
+     * @param {Interval} interval
+     * @returns {Interval[]}
+     */
+    exclusion(interval) </span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="36"><span class="badge badge-success">36</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="36">{}</span><span class="stryker-original-code" data-mutant="36"><span class="bg-success-light">{
+        let intersec = this.intersection(interval);
+        if(</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="37"><span class="badge badge-success">37</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="37">false</span><a href="#" class="stryker-mutant-button" tabindex="0" title="IfStatement" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="38"><span class="badge badge-success">38</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="38">true</span><span class="stryker-original-code" data-mutant="37"><span class="stryker-original-code" data-mutant="38"><span class="bg-success-light">intersec</span></span></span><span class="bg-success-light">)</span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="39"><span class="badge badge-success">39</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="39">{}</span><span class="stryker-original-code" data-mutant="39"><span class="bg-success-light">{
+            let union = this.union(interval)[0];
+            return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="40"><span class="badge badge-success">40</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="40">[]</span><span class="stryker-original-code" data-mutant="40"><span class="bg-success-light">[new Interval(Math.min(union.start,intersec.start),Math.max(union.start,intersec.start)),
+                    new Interval(Math.min(union.end,intersec.end),Math.max(union.end,intersec.end))]</span></span><span class="bg-success-light">;
+        }</span></span><span class="bg-success-light"> else</span><a href="#" class="stryker-mutant-button" tabindex="0" title="Block" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="41"><span class="badge badge-success">41</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="41">{}</span><span class="stryker-original-code" data-mutant="41"><span class="bg-success-light">{
+            return </span><a href="#" class="stryker-mutant-button" tabindex="0" title="ArrayLiteral" data-content="status: Killed" data-mutant-status-annotation="success" data-mutant-status="1" data-mutant="42"><span class="badge badge-success">42</span></a><span class="badge badge-info stryker-mutant-replacement" hidden="hidden" data-mutant="42">[]</span><span class="stryker-original-code" data-mutant="42"><span class="bg-success-light">[this,interval]</span></span><span class="bg-success-light">;
+        }</span></span><span class="bg-success-light">
+    }</span></span><span class="bg-null">;
+}
+
+module.exports = Interval;</span>
+</code></pre></div>
+<div class="col-lg-5"><table class="table table-sm table-hover mutant-table"><thead><tr><th>#</th>
+<th>Mutator</th>
+<th>State</th>
+<th>Location</th>
+<th>Original</th>
+<th>Replacement</th></tr></thead>
+<tbody><tr><th>0</th>
+<td>Block</td>
+<td>Killed</td>
+<td>1
+:
+28</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>1</th>
+<td>Block</td>
+<td>Killed</td>
+<td>6
+:
+15</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>2</th>
+<td>StringLiteral</td>
+<td>Killed</td>
+<td>7
+:
+15</td>
+<td><code>`[${ ...  }]`</code></td>
+<td><code>""</code></td></tr>
+<tr><th>3</th>
+<td>Block</td>
+<td>Killed</td>
+<td>24
+:
+23</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>4</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>25
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>5</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>25
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>6</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>25
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>7</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>25
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>8</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>25
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>9</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>25
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>10</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>25
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>11</th>
+<td>BinaryExpression</td>
+<td>Survived</td>
+<td>25
+:
+44</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>12</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>25
+:
+44</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>13</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>25
+:
+44</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>14</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>25
+:
+44</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>15</th>
+<td>Block</td>
+<td>Killed</td>
+<td>44
+:
+23</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>16</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>45
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>17</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>45
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>18</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>45
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>19</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>45
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>20</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>45
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>21</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>45
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>22</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>45
+:
+15</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>23</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>45
+:
+47</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>24</th>
+<td>BinaryExpression</td>
+<td>Killed</td>
+<td>45
+:
+47</td>
+<td><code>.    ...    .</code></td>
+<td><code>.    ...    .</code></td></tr>
+<tr><th>25</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>45
+:
+47</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>26</th>
+<td>ConditionalExpression</td>
+<td>Killed</td>
+<td>45
+:
+47</td>
+<td><code>.    ...    .</code></td>
+<td><code></code></td></tr>
+<tr><th>27</th>
+<td>Block</td>
+<td>Killed</td>
+<td>64
+:
+20</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>28</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>65
+:
+12</td>
+<td><code>.    ...    )</code></td>
+<td><code></code></td></tr>
+<tr><th>29</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>65
+:
+12</td>
+<td><code>.    ...    )</code></td>
+<td><code></code></td></tr>
+<tr><th>30</th>
+<td>ArrayLiteral</td>
+<td>Killed</td>
+<td>66
+:
+19</td>
+<td><code>[    ...  ))]</code></td>
+<td><code>[]</code></td></tr>
+<tr><th>31</th>
+<td>Block</td>
+<td>Killed</td>
+<td>67
+:
+12</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>32</th>
+<td>ArrayLiteral</td>
+<td>Killed</td>
+<td>68
+:
+19</td>
+<td><code>[    ,        ]</code></td>
+<td><code>[]</code></td></tr>
+<tr><th>33</th>
+<td>Block</td>
+<td>Killed</td>
+<td>88
+:
+27</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>34</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>89
+:
+12</td>
+<td><code>.    ...    )</code></td>
+<td><code></code></td></tr>
+<tr><th>35</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>89
+:
+12</td>
+<td><code>.    ...    )</code></td>
+<td><code></code></td></tr>
+<tr><th>36</th>
+<td>Block</td>
+<td>Killed</td>
+<td>111
+:
+24</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>37</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>113
+:
+11</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>38</th>
+<td>IfStatement</td>
+<td>Killed</td>
+<td>113
+:
+11</td>
+<td><code></code></td>
+<td><code></code></td></tr>
+<tr><th>39</th>
+<td>Block</td>
+<td>Killed</td>
+<td>113
+:
+20</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>40</th>
+<td>ArrayLiteral</td>
+<td>Killed</td>
+<td>115
+:
+19</td>
+<td><code>[    ...  ))]</code></td>
+<td><code>[]</code></td></tr>
+<tr><th>41</th>
+<td>Block</td>
+<td>Killed</td>
+<td>117
+:
+14</td>
+<td><code>{
+   ...    }</code></td>
+<td><code>{}</code></td></tr>
+<tr><th>42</th>
+<td>ArrayLiteral</td>
+<td>Killed</td>
+<td>118
+:
+19</td>
+<td><code>[    ,        ]</code></td>
+<td><code>[]</code></td></tr></tbody></table></div></div></div></div>
+<footer>Generated with stryker-html-reporter generator. Visit the 
+<a href="https://stryker-mutator.io" target="_blank">Stryker website</a></footer></div>
+<script src="strykerResources/popper.js/dist/umd/popper.min.js" defer="defer"></script>
+<script src="strykerResources/jquery/dist/jquery.slim.min.js" defer="defer"></script>
+<script src="strykerResources/bootstrap/js/bootstrap.min.js" defer="defer"></script>
+<script src="strykerResources/stryker.js" defer="defer"></script></body></html>
