@@ -19,6 +19,15 @@ describe('Factorial', function () {
   test('Factorial of negative integers throws exception', () => {
     expect(() => { Util.factorial(-10) }).toThrow();
   });
+
+  test('Factorial of non integers throws exception', () => {
+    expect(() => { Util.factorial("SDFSDFSDFSDFSDFSD") }).toThrow();
+  });
+
+  test('Factorial of non integers throws exception', () => {
+    expect(() => { Util.factorial(10000) }).toThrow();
+  });
+
 });
 
 /**
